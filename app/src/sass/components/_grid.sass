@@ -1,0 +1,39 @@
+.clearfix:before,
+.clearfix:after
+  content: " "
+  display: table
+.clearfix:after
+  clear: both
+.clearfix
+  *zoom: 1
+
+.row
+  margin: 0 auto
+  width: 100%
+  @extend .clearfix
+
+  @media (min-width: 1600px)
+    width: 1200px
+
+.column
+  @include box-sizing()
+  transition: all .3s
+  float: left
+  margin: 0
+  padding: 0 1em
+
+$total-columns: 24
+
+@for $i from 1 through $total-columns
+  .column.s#{$i}
+    width: ($i / $total-columns) * 100%
+
+@media (min-width: 600px)
+  @for $i from 1 through $total-columns
+    .column.m#{$i}
+      width: ($i / $total-columns) * 100%
+
+@media (min-width: 900px)
+  @for $i from 1 through $total-columns
+    .column.l#{$i}
+      width: ($i / $total-columns) * 100%
