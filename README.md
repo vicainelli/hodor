@@ -34,7 +34,7 @@ $ yarn
 
 ## Taks
 
-### Buil (default)
+### Build (default)
 
 Run this task to build static files
 
