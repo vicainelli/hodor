@@ -2,9 +2,18 @@
   "name": "hodor",
   "version": "1.0.0",
   "description": "A simple and fast boilerplate for static projects using Gulp, Sass and Pug",
-  "author": "Vinicius Cainelli <vicainelli@gmail.com>",
+  "author": "Vinicius Cainelli <vicainelli@gmail.com> (http://vicainelli.github.io/)",
   "license": "MIT",
-  "dependencies": {
+  "keywords": [
+    "boilerplate",
+    "starter kit"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vicainelli/hodor/issues"
+  },
+  "homepage": "https://github.com/vicainelli/hodor#readme",
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-plumber": "^1.1.0",
     "gulp-pug": "^3.2.0",
