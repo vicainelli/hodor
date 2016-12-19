@@ -9,7 +9,13 @@
     sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
     watch = require('gulp-watch'),
-    pug = require('gulp-pug');
+    pug = require('gulp-pug'),
+    tinypng = require('gulp-tinypng');
+
+
+  // Config
+  // ====================================
+  var tinyPNG_KEY = 'wPSIKzVf4gs8j6uAcoUUnXLfcJ1xwnzw';
 
 
   // TASK: Stylesheet
@@ -19,7 +25,7 @@
       .pipe(sourcemaps.init())
       .pipe(plumber())
       .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-      .pipe(gulp.dest('./dist/css'));
+      .pipe(gulp.dest('./dist/assets/css'));
   });
 
 
@@ -31,6 +37,16 @@
       .pipe(gulp.dest('./dist/'));
   });
 
+
+  // TASK: Views
+  // ====================================
+  gulp.task('tinypng', function() {
+    gulp.src('src/images/**/*.png')
+      .pipe(tinypng(tinyPNG_KEY))
+      .pipe(gulp.dest('./dist/assets/images/'));
+  });
+
+
   // TASK: Watch
   // ====================================
   gulp.task('watch', function() {
@@ -41,6 +57,6 @@
 
   // TASK: Default
   // ====================================
-  gulp.task('default', ['sass', 'views']);
+  gulp.task('default', ['sass', 'views', 'tinypng']);
 
 })();
