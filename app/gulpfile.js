@@ -9,8 +9,7 @@
     sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
     watch = require('gulp-watch'),
-    pug = require('gulp-pug'),
-    tinypng = require('gulp-tinypng');
+    pug = require('gulp-pug');
 
 
   // Config
@@ -38,15 +37,6 @@
   });
 
 
-  // TASK: Views
-  // ====================================
-  gulp.task('tinypng', function() {
-    gulp.src('src/images/**/*.png')
-      .pipe(tinypng(tinyPNG_KEY))
-      .pipe(gulp.dest('./dist/assets/images/'));
-  });
-
-
   // TASK: Watch
   // ====================================
   gulp.task('watch', function() {
@@ -57,6 +47,6 @@
 
   // TASK: Default
   // ====================================
-  gulp.task('default', ['sass', 'views', 'tinypng']);
+  gulp.task('default', ['sass', 'views']);
 
 })();

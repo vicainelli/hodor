@@ -19,7 +19,6 @@
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1",
     "gulp-watch": "^4.3.11",
-    "husky": "^0.12.0",
-    "gulp-tinypng": "^1.0.2"
+    "husky": "^0.12.0"
   }
 }
