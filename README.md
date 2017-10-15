@@ -19,7 +19,7 @@ This project uses [Yarn](https://yarnpkg.com/), [Gulp](http://gulpjs.com/), [Sas
 $ git clone https://github.com/vicainelli/hodor.git
 ```
 
-### 3. Install gulp globally (If you do not yet)
+### 3. Install gulp globally
 
 ```sh
 $ npm install -g gulp
